@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <ul class="list-group">
                         <a href="{{route('pizza.index')}}" class="list-group-item list-group-item-action">View</a>
-                        <a href="{{route('pizza.create')}}" class="list-group-item list-group-item-action">create</a>
+                        <a href="{{route('pizza.create')}}" class="list-group-item list-group-item-action">Create</a>
                     </ul>
                 </div>
             </div>
@@ -28,7 +28,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Pizza') }}</div>
-            <form action="{{route('pizza.store')}}" method="post" enctype="multipart/form-data">@csrf
+                <form action="{{route('pizza.store')}}" method="post" enctype="multipart/form-data">@csrf
                 <div class="card-body">
                     <div class="form-group">
                         <label for="name">Name of Pizza</label>
@@ -48,9 +48,9 @@
                         <label for="category">Category</label>
                         <select class="form-control" name="category">
                             <option value=""></option>
-                            <option value="vegetarian">Vegetarian</option>
-                            <option value="nocru">No-Crust</option>
-                            <option value="vegenocru">Vegetarian + No-Crust</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="No-Crust">No-Crust</option>
                         </select>
                     </div>
                     <div class="form-group">
