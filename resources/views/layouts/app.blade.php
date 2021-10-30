@@ -58,9 +58,25 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+
+                                    @if (auth()->user()->is_admin == 0)
+                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                        {{ __('Your order history') }}
+                                    </a>
+                                    @endif
+                                    @if (auth()->user()->is_admin == 1)
+
+                                        <a class="dropdown-item" href="{{ route('customers') }}">
+                                            {{ __('All customers') }}
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('user.order') }}">
+                                            {{ __('User order') }}
+                                        </a>
+                                    @endif
+
+
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
