@@ -34,3 +34,6 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
 
     Route::get('/customer', [App\Http\Controllers\UserOrderController::class, 'customers'])->name('customers');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
