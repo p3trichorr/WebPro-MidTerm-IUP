@@ -11,6 +11,8 @@
             </nav>
             <div class="card">
                 <div class="card-header">{{ __('Order') }}</div>
+                    <a href="{{route('pizza.index')}}"><button class="bnt btn-primary btn-sm " style="float: right">View Pizza</button></a>
+                    <a href="{{route('pizza.create')}}"><button class="bnt btn-success btn-sm" style="float: right">Add new Pizza</button></a>
 
                 <div class="card-body">
                 <table class="table table-striped table-hover">
